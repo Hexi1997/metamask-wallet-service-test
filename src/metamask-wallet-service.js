@@ -9744,7 +9744,7 @@ System.register([], (function(n, t) {
                                         t.error(n)
                                     }
                                     new this.web3.eth.Contract(u.cloneDeep(r)).deploy({
-                                        data: n.solcCompiledOutput.evm.bytecode.object,
+                                        data: "0x" + n.solcCompiledOutput.evm.bytecode.object,
                                         arguments: e
                                     }).send({
                                         from: n.account.address,
