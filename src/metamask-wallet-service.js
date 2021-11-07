@@ -9757,16 +9757,18 @@ System.register([], (function(n, t) {
                                                 hash: n
                                             }
                                         }),
-                                        this.scheduledQueryTransAndTriggerConfirm(t, n).catch((n=>{
-                                            t.error(n),
-                                            t.complete()
-                                        }
-                                        ))
+//                                         this.scheduledQueryTransAndTriggerConfirm(t, n).catch((n=>{
+//                                             t.error(n),
+//                                             t.complete()
+//                                         }
+//                                         ))
                                     }
                                     )).on("error", (n=>{
                                         t.error(n),
                                         t.complete()
-                                    }
+                                    }.on("receipt",r=>{
+                                       console.log(r)    
+                                    })
                                     )).catch((n=>{
                                         t.error(n),
                                         t.complete()
